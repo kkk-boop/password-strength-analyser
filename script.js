@@ -2,6 +2,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const password = document.getElementById('password');
   const bar = document.getElementById('bar');
   const strengthText = document.getElementById('strength-text');
+  const showPassword = document.getElementById('showPassword');
+
   const checklist = {
     len: document.getElementById('len'),
     upper: document.getElementById('upper'),
@@ -28,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (hasNum) score += 20;
     if (hasSpecial) score += 15;
 
-    // Strength bar update
+    // Update strength bar and text
     bar.style.width = score + "%";
     bar.style.backgroundColor =
       score < 40 ? "red" :
@@ -36,12 +38,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
     strengthText.textContent = `Strength: ${score} / 100`;
 
-    // Checklist feedback
+    // Update checklist
     checklist.len.textContent = (hasLength ? "✔️" : "❌") + " Length ≥ 12";
     checklist.upper.textContent = (hasUpper ? "✔️" : "❌") + " Uppercase letter";
     checklist.lower.textContent = (hasLower ? "✔️" : "❌") + " Lowercase letter";
     checklist.num.textContent = (hasNum ? "✔️" : "❌") + " Number";
     checklist.special.textContent = (hasSpecial ? "✔️" : "❌") + " Special character";
+  });
+
+  // Show/hide password
+  showPassword.addEventListener('change', () => {
+    password.type = showPassword.checked ? 'text' : 'password';
   });
 
   // Password generator
@@ -52,6 +59,8 @@ window.addEventListener('DOMContentLoaded', () => {
       generated += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     password.value = generated;
+    showPassword.checked = true;
+    password.type = 'text';
     password.dispatchEvent(new Event('input'));
   });
 
