@@ -1,6 +1,5 @@
 
-
-    const password = document.getElementById('password');
+const password = document.getElementById('password');
 const showPassword = document.getElementById('showPassword');
 const score = document.getElementById('score');
 const checklist = {
@@ -24,10 +23,14 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     generated += chars.charAt(Math.floor(Math.random() * chars.length));
   }
   password.value = generated;
+
+  // Force password to be visible
   showPassword.checked = true;
   password.type = 'text';
-  password.dispatchEvent(new Event('input'));
+
+  password.dispatchEvent(new Event('input')); // trigger update
 });
+
 
 document.getElementById('darkToggle').addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
