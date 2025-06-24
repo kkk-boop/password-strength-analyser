@@ -1,56 +1,9 @@
 body {
   font-family: sans-serif;
   text-align: center;
-  background: #f5f5f5;
-  color: #333;
+  background: #ffffff;
+  color: #111;
   transition: background 0.3s, color 0.3s;
-}
-
-.container {
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-}
-
-input {
-  padding: 10px;
-  width: 90%;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 10px 15px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-#bar-container {
-  width: 100%;
-  height: 10px;
-  background-color: #ddd;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-#bar {
-  height: 100%;
-  width: 0%;
-  background-color: red;
-  border-radius: 5px;
-  transition: width 0.3s, background-color 0.3s;
-}
-
-#checklist {
-  text-align: left;
-  list-style: none;
-  padding-left: 0;
-  margin-top: 15px;
-}
-
-#checklist li {
-  transition: color 0.3s;
 }
 
 .dark-mode {
@@ -58,13 +11,32 @@ button {
   color: #eee;
 }
 
-.dark-mode input,
-.dark-mode button {
-  background: #222;
-  color: #eee;
-  border: 1px solid #444;
+.container {
+  margin-top: 50px;
 }
 
-.dark-mode #bar-container {
-  background: #444;
+input[type="password"] {
+  padding: 10px;
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 10px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+#strengthBar {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
 }
