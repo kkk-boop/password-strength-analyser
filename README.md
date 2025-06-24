@@ -14,8 +14,9 @@ A simple, interactive web app that checks the strength of your password in real 
 - Deployed on GitHub Pages
 
 ## Preview
+![Uploading pwstranScreenshot.png…]()
 
-![Password Strength Analyzer Screenshot](https://kkk-boop.github.io/password-strength-analyser/screenshot.png)  
+
 > Visit the live site [kkk-boop.github.io/password-strength-analyser](https://kkk-boop.github.io/password-strength-analyser/)
 
 ## How It Works
