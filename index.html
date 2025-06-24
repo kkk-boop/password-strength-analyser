@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Password Strength Tester</title>
+  <title>Password Strength Analyzer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Password Strength Checker</h1>
-  <input type="password" id="password" placeholder="Enter your password" />
-  <div id="strength">Password Strength</div>
-  <ul id="suggestions"></ul>
+  <div class="container">
+    <h1>Password Strength Analyzer</h1>
+    
+    <input type="password" id="password" placeholder="Enter your password" />
+    <button id="generateBtn">🔐 Generate Password</button>
+
+    <div id="strength-text">Strength: 0 / 100</div>
+    <div id="bar-container">
+      <div id="bar"></div>
+    </div>
+
+    <ul id="checklist">
+      <li id="len">❌ Length ≥ 12</li>
+      <li id="upper">❌ Uppercase letter</li>
+      <li id="lower">❌ Lowercase letter</li>
+      <li id="num">❌ Number</li>
+      <li id="special">❌ Special character</li>
+    </ul>
+
+    <button id="toggleDark">🌙 Toggle Dark Mode</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
